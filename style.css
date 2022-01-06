@@ -6,15 +6,13 @@
 }
 
 body {
-  margin: 3vh;
-}
-
-.inl-bk {
-  display: inline-block;
+  margin: 0;
 }
 
 .wrapper {
   font-size: 0;
+
+  text-align: center;
 }
 
 .card {
@@ -23,11 +21,12 @@ body {
 
   position: relative;
 
+  text-align: start;
   font-size: 16px;
-
-  /* padding: 50px; */
+  
   padding: 3em 3.5em;
-  margin: 10px 0 0 10px;
+  /* margin: 40px 0 0 60px; */
+  margin: 30px;
 
   color: white;
 
@@ -43,13 +42,11 @@ body {
   font-weight: 500;
   font-size: 21px;
   text-transform: capitalize;
-
-  /* margin: 10px 0 0 0; */
+ 
   margin: 0.5em 0 0 0;
 }
 
 .card-content {
-  /* padding-top: 20px; */
   padding-top: 0.5em;
 
   font-size: 40px;
@@ -58,7 +55,6 @@ body {
 }
 
 .card-lower {
-  /* padding-top: 40px; */
   padding-top: 4em;
 }
 
@@ -92,32 +88,31 @@ body {
   );
 }
 
-.card::after {
-  display: inline-block;
-  content: "";
-
-  position: absolute;
-  top: -30px;
-  left: 310px;
-
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
+.card::after,
 .card::before {
   display: inline-block;
   content: "";
 
   position: absolute;
-  top: 160px;
-  left: 230px;
-
-  width: 270px;
-  height: 270px;
+ 
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.card::after {
+  width: 240px;
+  height: 240px;
+  
+  top: -30px;
+  left: 310px;
+}
+
+.card::before {
+  width: 270px;
+  height: 270px;
+
+  top: 160px;
+  left: 230px;
 }
 
 .card:first-child .card-content::after {
