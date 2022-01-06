@@ -7,12 +7,16 @@
 
 body {
   margin: 0;
+  padding: 50px 0;
+
+  height: 100vh;
 }
 
 .wrapper {
   font-size: 0;
-
   text-align: center;
+
+  height: 100%;
 }
 
 .card {
@@ -25,16 +29,13 @@ body {
   font-size: 16px;
   
   padding: 3em 3.5em;
-  /* margin: 40px 0 0 60px; */
   margin: 30px;
 
   color: white;
 
   border-radius: 8px;
-  
+ 
   width: 450px;
-  /* min-width: 300px; */
-
   height: 280px;
 }
 
@@ -123,7 +124,7 @@ body {
 
   position: absolute;
   left: 310px;
-  top: -25px;
+  top: -35px;
 }
 
 .card:nth-child(3n+1) .card-content::after {
