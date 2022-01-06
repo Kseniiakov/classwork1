@@ -6,7 +6,7 @@
 }
 
 body {
-  margin: 5vh;
+  margin: 3vh;
 }
 
 .inl-bk {
@@ -15,7 +15,6 @@ body {
 
 .wrapper {
   font-size: 0;
-  margin-bottom: 50px;
 }
 
 .card {
@@ -28,19 +27,16 @@ body {
 
   /* padding: 50px; */
   padding: 3em 3.5em;
+  margin: 10px 0 0 10px;
 
   color: white;
 
   border-radius: 8px;
-
-  width: 500px;
+  
+  width: 450px;
   /* min-width: 300px; */
 
   height: 280px;
-}
-
-.card + .card {
-  margin-left: 50px;
 }
 
 .card-title {
@@ -66,7 +62,7 @@ body {
   padding-top: 4em;
 }
 
-.wrapper > .card:first-child {
+.wrapper > .card:nth-child(3n+1) {
   background: rgb(255, 186, 152);
   background: linear-gradient(
     90deg,
@@ -76,7 +72,7 @@ body {
   );
 }
 
-.wrapper > .card:nth-child(2) {
+.wrapper > .card:nth-child(3n+2) {
   background: rgb(136, 198, 245);
   background: linear-gradient(
     90deg,
@@ -96,18 +92,18 @@ body {
   );
 }
 
-.card:after {
+.card::after {
   display: inline-block;
   content: "";
 
   position: absolute;
-  top: -40px;
-  left: 350px;
+  top: -30px;
+  left: 310px;
 
-  width: 260px;
-  height: 260px;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .card::before {
@@ -115,38 +111,38 @@ body {
   content: "";
 
   position: absolute;
-  top: 150px;
-  left: 240px;
+  top: 160px;
+  left: 230px;
 
-  width: 290px;
-  height: 290px;
+  width: 270px;
+  height: 270px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
-.card-first .card-content:after {
+.card:first-child .card-content::after {
   display: inline-block;
   content: url(./icons/chart-line.svg);
 
   position: absolute;
-  left: 360px;
-  top: -30px;
+  left: 310px;
+  top: -25px;
 }
 
-.card-second .card-content:after {
+.card:nth-child(2) .card-content::after {
   display: inline-block;
   content: url(./icons/bookmark-outline.svg);
 
   position: absolute;
-  left: 360px;
-  top: -30px;
+  left: 310px;
+  top: -25px;
 }
 
-.card-third .card-content:after {
+.card:nth-child(3) .card-content::after {
   display: inline-block;
   content: url(./icons/diamond.svg);
 
   position: absolute;
-  left: 360px;
-  top: -30px;
+  left: 310px;
+  top: -25px;
 }
