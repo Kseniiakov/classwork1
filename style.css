@@ -15,15 +15,19 @@ body {
 
 .wrapper {
   font-size: 0;
+  margin-bottom: 50px;
 }
 
 .card {
   display: inline-block;
+  overflow: hidden;
+
+  position: relative;
 
   font-size: 16px;
 
   /* padding: 50px; */
-  padding: 3em;
+  padding: 3em 3.5em;
 
   color: white;
 
@@ -92,6 +96,34 @@ body {
   );
 }
 
+.card:after {
+  display: inline-block;
+  content: "";
+
+  position: absolute;
+  top: -40px;
+  left: 350px;
+
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.card::before {
+  display: inline-block;
+  content: "";
+
+  position: absolute;
+  top: 150px;
+  left: 240px;
+
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 .card-first .card-content:after {
   display: inline-block;
   content: url(./icons/chart-line.svg);
@@ -104,6 +136,15 @@ body {
 .card-second .card-content:after {
   display: inline-block;
   content: url(./icons/bookmark-outline.svg);
+
+  position: absolute;
+  left: 360px;
+  top: -30px;
+}
+
+.card-third .card-content:after {
+  display: inline-block;
+  content: url(./icons/diamond.svg);
 
   position: absolute;
   left: 360px;
