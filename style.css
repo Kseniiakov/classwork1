@@ -1,7 +1,111 @@
 * {
   box-sizing: border-box;
+
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+body {
+  margin: 5vh;
 }
 
 .inl-bk {
   display: inline-block;
+}
+
+.wrapper {
+  font-size: 0;
+}
+
+.card {
+  display: inline-block;
+
+  font-size: 16px;
+
+  /* padding: 50px; */
+  padding: 3em;
+
+  color: white;
+
+  border-radius: 8px;
+
+  width: 500px;
+  /* min-width: 300px; */
+
+  height: 280px;
+}
+
+.card + .card {
+  margin-left: 50px;
+}
+
+.card-title {
+  font-weight: 500;
+  font-size: 21px;
+  text-transform: capitalize;
+
+  /* margin: 10px 0 0 0; */
+  margin: 0.5em 0 0 0;
+}
+
+.card-content {
+  /* padding-top: 20px; */
+  padding-top: 0.5em;
+
+  font-size: 40px;
+
+  position: relative;
+}
+
+.card-lower {
+  /* padding-top: 40px; */
+  padding-top: 4em;
+}
+
+.wrapper > .card:first-child {
+  background: rgb(255, 186, 152);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 186, 152, 1) 0%,
+    rgba(254, 157, 152, 1) 50%,
+    rgba(254, 142, 170, 1) 100%
+  );
+}
+
+.wrapper > .card:nth-child(2) {
+  background: rgb(136, 198, 245);
+  background: linear-gradient(
+    90deg,
+    rgba(136, 198, 245, 1) 0%,
+    rgba(63, 164, 234, 1) 50%,
+    rgba(50, 153, 227, 1) 100%
+  );
+}
+
+.wrapper > .card:nth-child(3) {
+  background: rgb(120, 216, 208);
+  background: linear-gradient(
+    90deg,
+    rgba(120, 216, 208, 1) 0%,
+    rgba(53, 216, 191, 1) 50%,
+    rgba(47, 212, 195, 1) 100%
+  );
+}
+
+.card-first .card-content:after {
+  display: inline-block;
+  content: url(./icons/chart-line.svg);
+
+  position: absolute;
+  left: 360px;
+  top: -30px;
+}
+
+.card-second .card-content:after {
+  display: inline-block;
+  content: url(./icons/bookmark-outline.svg);
+
+  position: absolute;
+  left: 360px;
+  top: -30px;
 }
