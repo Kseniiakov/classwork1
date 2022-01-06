@@ -58,6 +58,8 @@ body {
   padding-top: 4em;
 }
 
+/* background */
+
 .wrapper > .card:nth-child(3n+1) {
   background: rgb(255, 186, 152);
   background: linear-gradient(
@@ -78,7 +80,7 @@ body {
   );
 }
 
-.wrapper > .card:nth-child(3) {
+.wrapper > .card:nth-child(3n+3) {
   background: rgb(120, 216, 208);
   background: linear-gradient(
     90deg,
@@ -88,6 +90,8 @@ body {
   );
 }
 
+/* circles */
+
 .card::after,
 .card::before {
   display: inline-block;
@@ -96,48 +100,40 @@ body {
   position: absolute;
  
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
+
+  width: 260px;
+  height: 260px;
 }
 
 .card::after {
-  width: 240px;
-  height: 240px;
-  
   top: -30px;
   left: 310px;
 }
 
 .card::before {
-  width: 270px;
-  height: 270px;
-
-  top: 160px;
-  left: 230px;
+  top: 150px;
+  left: 210px;
 }
 
-.card:first-child .card-content::after {
+/* icons */
+
+.card .card-content::after{
   display: inline-block;
+
+  position: absolute;
+  left: 310px;
+  top: -25px;
+}
+
+.card:nth-child(3n+1) .card-content::after {
   content: url(./icons/chart-line.svg);
-
-  position: absolute;
-  left: 310px;
-  top: -25px;
 }
 
-.card:nth-child(2) .card-content::after {
-  display: inline-block;
+.card:nth-child(3n+2) .card-content::after {
   content: url(./icons/bookmark-outline.svg);
-
-  position: absolute;
-  left: 310px;
-  top: -25px;
 }
 
-.card:nth-child(3) .card-content::after {
-  display: inline-block;
+.card:nth-child(3n+3) .card-content::after {
   content: url(./icons/diamond.svg);
-
-  position: absolute;
-  left: 310px;
-  top: -25px;
 }
