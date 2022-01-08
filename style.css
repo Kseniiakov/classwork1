@@ -25,7 +25,7 @@ body {
 
   position: relative;
 
-  text-align: start;
+  text-align: left;
   font-size: 16px;
   
   padding: 3em 3.5em;
@@ -39,29 +39,30 @@ body {
   height: 280px;
 }
 
+.card-title,
+.card-content {
+  margin: 0.5em 0 0 0;
+}
+
 .card-title {
   font-weight: 500;
   font-size: 21px;
   text-transform: capitalize;
- 
-  margin: 0.5em 0 0 0;
 }
 
 .card-content {
-  padding-top: 0.5em;
-
   font-size: 40px;
 
   position: relative;
 }
 
 .card-lower {
-  padding-top: 4em;
+  margin: 4em 0 0 0;
 }
 
 /* background */
 
-.wrapper > .card:nth-child(3n+1) {
+.card:nth-child(3n+1) {
   background: rgb(255, 186, 152);
   background: linear-gradient(
     90deg,
@@ -71,7 +72,7 @@ body {
   );
 }
 
-.wrapper > .card:nth-child(3n+2) {
+.card:nth-child(3n+2) {
   background: rgb(136, 198, 245);
   background: linear-gradient(
     90deg,
@@ -81,7 +82,7 @@ body {
   );
 }
 
-.wrapper > .card:nth-child(3n+3) {
+.card:nth-child(3n+3) {
   background: rgb(120, 216, 208);
   background: linear-gradient(
     90deg,
@@ -124,7 +125,7 @@ body {
 
   position: absolute;
   left: 310px;
-  top: -35px;
+  top: -45px;
 }
 
 .card:nth-child(3n+1) .card-content::after {
